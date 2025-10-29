@@ -1,0 +1,43 @@
+body{
+    background-color: darkslategrey;
+}
+.skill_button{
+    width: max-content;
+    padding: 24px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px;   
+    border-style:none;
+    border-radius: 20%;
+}
+.time_show{
+    width: max-content;
+    padding: 24px 12px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px;   
+}
+.skill_group{
+    display: inline-flex;
+    margin: 8px;
+    background-color: white;
+    color: midnightblue;
+    width: 160px;
+    height: 128px;
+    border-radius: 25%;
+}
+
+.stop_button{
+    width: fit-content;
+    height: auto;
+    background-color: lightsalmon;
+    color: darkslategrey;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
