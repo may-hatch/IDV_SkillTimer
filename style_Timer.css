@@ -1,7 +1,19 @@
 body{
-    background-color: darkslategrey;
+    background-color: black;
 }
-.skill_button{
+/*全体操作*/
+.console_group{
+    width: fit-content;
+    height: auto;
+    background-color: mediumaquamarine;
+    color: midnightblue;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.console_button{
     width: max-content;
     padding: 24px 12px;
     font-size: 16px;
@@ -9,35 +21,82 @@ body{
     cursor: pointer;
     margin: 8px;   
     border-style:none;
-    border-radius: 20%;
+    border-radius: 8px;
+}
+/*スキルエリア*/
+.all_skill{
+    width: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+/*スキルごと*/
+.skill_group{
+    display: inline-flex;
+    margin: 8px;
+    background-color: mediumaquamarine;
+    color: midnightblue;
+    width: 160px;
+    height: 128px;
+    border-radius: 8px;
+}
+.skill_button{
+    width: max-content;
+    padding: 24px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 8px;   
+    border-style:none;
+    border-radius: 8px;
 }
 .time_show{
     width: max-content;
     padding: 24px 12px;
     font-size: 32px;
     font-weight: bold;
-    cursor: pointer;
     margin: 8px;   
 }
-.skill_group{
-    display: inline-flex;
-    margin: 8px;
-    background-color: white;
-    color: midnightblue;
-    width: 160px;
-    height: 128px;
-    border-radius: 25%;
+/*監視者用のエリア*/
+.circleTimer{
+    /*position:relative=キャンバスの位置決め*/
+    position: relative;
+    width: 75px;
+    height: fit-content;
+    margin: 4px;
 }
-
-.stop_button{
-    width: fit-content;
-    height: auto;
-    background-color: lightsalmon;
-    color: darkslategrey;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
+svg {
+    /*上を視点にするための回転(-90度)*/
+    transform: rotate(-90deg);
+    width: 100%;
+    height: 100%;
+}
+.progress {
+    /*円の色*/
+    stroke: goldenrod;    
+    /*円周の長さ*/
+    stroke-dasharray: 283;
+    /*初期での"ずれ"*/
+    stroke-dashoffset: 283;
+    /*描画の挙動*/
+    transition: stroke-dashoffset 1s linear;
+    stroke-width: 8px;
+}
+.time_show_40{
+    color: aliceblue;
+    /*position:absolite=キャンバス内のどこにあるか*/
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+}
+.kanshi_show{
+    color: midnightblue;
+    position: absolute;
+    transform: translate(50%,0%);
     font-size: 16px;
     font-weight: bold;
-    cursor: pointer;
+    margin: 4px;
+    width: max-content;
 }
