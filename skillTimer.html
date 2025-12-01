@@ -8,21 +8,39 @@
 </head>
 
 <body>
-    <div class="skill_group">
-        <button id="btn150" class="skill_button">鬼没</button>
-        <div id="area150" class="time_show">150</div>
+    <div class="console_group">
+        <button id="btnStart" class="console_button">スタート</button>
+        <button id="btnReset" class="console_button">リセット</button>
     </div>
-    <div class="skill_group">
-        <button id="btn100" class="skill_button">瞬間</button>
-        <div id="area100" class="time_show">100</div>
-    </div>
-    <div class="skill_group">
-        <button id="btn90" class="skill_button">異常</button>
-        <div id="area90" class="time_show">90</div>
-    </div>
-    <div>
-        <button id="btnReset"class="stop_button">リセット</button>
+    <div class="all_skill">
+        <div class="skill_group">
+            <button id="btn150" class="skill_button">鬼没</button>
+            <div id="area150" class="time_show">150</div>
+        </div>
+        <div class="skill_group">
+            <button id="btn100" class="skill_button">瞬間</button>
+            <div id="area100" class="time_show">100</div>
+        </div>
+        <div class="skill_group">
+            <button id="btn90" class="skill_button">異常</button>
+            <div id="area90" class="time_show">90</div>
+        </div>
+        <div class="skill_group">
+            <button id="btn40" class="skill_button">監視</button>
+            <div class="circleTimer">
+                <!--svg=Scalable Vector Graphics-->
+                <svg viewBox="0 0 100 100">
+                    <!--cx,cy=中心座標、r=半径-->>
+                    <circle cx="50" cy="50" r="45" class="bg"/>
+                    <circle id="circle" cx="50" cy="50" r="45" class="progress"/>
+                </svg>
+                <div id="area40" class="time_show_40" >40</div>
+                <!--タイマーではなく個数なのでcss変える-->
+                <div id="areaKanshi" class="kanshi_show">0</div>
+            </div>    
+        </div>
     </div>
     <script src="events_Timer.js"></script>
+    
 </body>
 </html>
